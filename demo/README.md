@@ -16,7 +16,7 @@ Pre-requisites: gcc and libz
 
 ### bitmap_file_resolver
 
-This resolver is blockset agnostic and it will use the data from `data/blockset_81.bmp` bitmap file and [data/blockset.meta](data/blockset.meta) metadata file.
+This resolver is blockset agnostic and it will use the data from `data/blockset_81.bmp` bitmap file and [data/blockset_81.meta](data/blockset_81.meta) metadata file.
 
     bin/bitmap_file_resolver \
         data/blockset_81.bmp \
