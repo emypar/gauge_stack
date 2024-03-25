@@ -1,0 +1,6 @@
+.work/
+.work*
+bin/
+cvs/
+local/
+obj/
