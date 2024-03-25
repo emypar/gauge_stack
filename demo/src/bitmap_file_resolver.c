@@ -23,10 +23,6 @@ struct meta {
     uint8_t* bitmap;
 };
 
-/* The resolver interface (see resolver.h)s:
-*/
-const char* resolver_args = "BITMAP_FILE META_FILE";
-
 
 int load_meta(struct resolver* resolver, const char* meta_file) {
     struct meta* meta = (struct meta*)resolver->_resolver_internal;
@@ -80,6 +76,9 @@ int load_meta(struct resolver* resolver, const char* meta_file) {
    
 }
 
+/* The resolver interface (see resolver.h)s:
+*/
+const char* resolver_args = "BITMAP_FILE META_FILE";
 
 const struct resolver* init_resolver(int argc, char** argv) {
     if (argc < 2) {

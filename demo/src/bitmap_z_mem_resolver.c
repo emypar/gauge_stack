@@ -75,9 +75,6 @@ int get_z_bitmap(uint32_t bit_off_base, uint8_t* buf, size_t buf_sz) {
     return z_ret != Z_OK ? z_ret : z_ret1;
 }
 
-/* The resolver interface (see resolver.h)s:
-*/
-
 static const struct resolver _resolver PROGMEM = {
     .min_target = MIN_TARGET,
     .max_target = MAX_TARGET,
@@ -87,13 +84,13 @@ static const struct resolver _resolver PROGMEM = {
 
 };
 
+/* The resolver interface (see resolver.h)s:
+*/
+const char* resolver_args = NULL;
+
 const struct resolver* init_resolver(int argc, char** argv) {
     return &_resolver;
 }
-
-/* The resolver interface (see main.c):
-*/
-const char* resolver_args = NULL;
 
 int resolve(const struct resolver* resolver, uint32_t target, const char* blocks[]) {
     int j, z_ret, bs_start, bs_end;
