@@ -22,7 +22,7 @@ This resolver is blockset agnostic and it will use the data from `data/blockset_
         data/blockset_81.bmp \
         data/blockset_81.meta
 
-`bitmap_file_resolver` has the smallest memory footprint but, it is reasonbly fast but it requires external storage.
+`bitmap_file_resolver` has the smallest memory footprint, it is reasonably fast but it requires external storage.
 
 ### bitmap_mem_resolver
 
@@ -38,7 +38,7 @@ This resolver was compiled with the blockset information and resolution from the
 
     bin/blockset_81/bitmap_z_mem_resolver
 
-`bitmap_z_mem_resolver` has a smaller memory footprint (~ 0.6MiB), it doesn't require storage at all but it is slower, especially for large targets since since the compressed information has to fully uncompressed to reach the desired offset.
+`bitmap_z_mem_resolver` has a smaller memory footprint (~ 0.6MiB), it doesn't require storage at all, but it is the slowest, especially for large targets since the compressed information has to fully uncompressed to reach the desired offset.
 
 ## Validation
 
